@@ -30,13 +30,12 @@ Exploratory Data Analysis in this project begins with visualizing the spectrogra
 
 ### 3.1 Locating the noise range
 
-Calculated the median and IQR of the noise frequency data and then defined a range for different values of k:
-
-For k=1, the range is from 32.737 to 33.006 kHz, which includes 82.93% of the data points.
-For k=2, the range is from 32.603 to 33.140 kHz, which includes 95.72% of the data points.
-For k=3, the range is from 32.468 to 33.274 kHz, which includes 96.37% of the data points.
-
+Calculated the median and IQR of the noise frequency data.
 
 ![Initial Spectrogram with Noise](plots/Noise_dist.png)
+
+*Figure: The distribution of noise.*
+
+###32.468 to 33.274 kHz includes 96.37% of the points.
 
 ### 3.2 Bandstop Filter 
