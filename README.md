@@ -39,3 +39,8 @@ Calculated the median and IQR of the noise frequency data.
 **32.468 to 33.274 kHz includes 96.37% of the points.**
 
 ### 3.2 Bandstop Filter 
+Since the noise is highly concentrated in a small range of frequency, it is natuarl to use bandstop filter for noise cleaning.The bandstop filter is designed to attenuate frequencies within a defined suppression band while leaving other frequencies relatively unaffected.  
+  
+The filter is implemented using the scipy.signal package in Python, which provides the ‘butter’ function to generate the filter coefficients (b,a) for the desired bandstop characteristics. The signal is then processed using the filter function, applying the coefficients to the input data.  
+
+![Processed Spectrogram](plots/32khz.png)
