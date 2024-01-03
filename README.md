@@ -54,12 +54,13 @@ The filter is implemented using the scipy.signal package in Python, which provid
 
 ### 3.2 Filtering lower frequency
 Perform further analysis on lower frequencies (below 20kHz) to understand their patterns.
-<img src="plots/pfreq.png" alt="Primary Frequency Distribution" width="70%" />
+<img src="plots/pfreq.png" alt="Primary Frequency Distribution" width="70%" />  
+
 *Figure: Primary Frequency Distribution.*  
 
 Noting that there is no Call under 21k Hz, so next step is to filter frequency lower than 21k Hz.  
 
-![Filtering Lower Freq](plots/filtering_lower_freq.png)
+![Filtering Lower Freq](plots/filtering_lower_freq.png)  
 
 *Figure: Waveplot comparison of before and after filtering.*  
 
@@ -72,4 +73,22 @@ Processed audio has less variation in amplitude compared to the original, indica
 | Recall      | 82.02     |
 | F1-Score    | 71.19     |
 
-## 3. Model and Threshold
+## 4. Model and Threshold
+The software I am using in the project, is DeepSqueak, in which the in-built function is YOLO model. The YOLO (You Only Look Once) model is a fast object detection system that processes images in one pass, predicting what objects are in the image and where they are with a single look. This makes it much quicker than other methods that scan the image multiple times, which is why it's popular for tasks needing speed, like video analysis.  
+
+Threshold parameter determines the confidence level required by the model to label an event as a call. By increasing the threshold to 0.55. This adjustment aimed to strike a balance between sensitivity and specificity. Post-adjustment, we observed a notable increase in precision: from approximately 47% to 53.39%. 
+
+*Table: Applying Threshold*
+| Metric      | Value (%) |
+|-------------|-----------|
+| Precision   | 68.93      |
+| Recall      | 77.28     |
+| F1-Score    | 72.86     |
+
+## 5. Conclusion
+
+![Filtering Lower Freq](plots/result.png)  
+
+*Figure: Performance Improvement.*  
+
+By cleaning audio noises and applying threshold, I successfully demonstrated how enhancements in audio preprocessing and DeepSqueak’s neural network algorithms significantly improve the detection and analysis of rodent ultrasonic vocalizations.
