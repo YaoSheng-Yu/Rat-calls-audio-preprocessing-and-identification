@@ -32,10 +32,10 @@ Exploratory Data Analysis in this project begins with visualizing the spectrogra
 
 Calculated the median and IQR of the noise frequency data.
 
-![Initial Spectrogram with Noise](plots/Noise_dist.png)
+<img src="plots/Noise_dist.png" alt="Distribution of Noise" width="70%" />
 
 *Figure: The distribution of noise.*
 
-###32.468 to 33.274 kHz includes 96.37% of the points.
+**32.468 to 33.274 kHz includes 96.37% of the points.**
 
 ### 3.2 Bandstop Filter 
